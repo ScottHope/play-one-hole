@@ -3,23 +3,65 @@
 <head>
 <title>
 </title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons:36">
-<link href="Flexbox2.css" rel="stylesheet">
-
+<link rel="stylesheet" href="play-one-hole.css">
 </head>
 <body>
-<div id="modal">
-<div class="container left"></div>
-<div class="container right">
-<div class="tee previous"></div>
-<i class="material-icons up">expand_less</i>
-<div class="tee selected"></div>
-<i class="material-icons down">expand_more</i>
+<label>COURSE</label>
+<select name="course">
+  <option value="Bandon Dunes" selected>Bandon Dunes</option>
+  <option value="Bethpage Black">Bethpage Black</option>
+  <option value="Cabo del Sol">Cabo del Sol</option>
+  <option value="Chambers Bay">Chambers Bay</option>
+  <option value="Congressional">Congressional</option>
+  <option value="Erin Hills">Erin Hills</option>
+  <option value="Kiawah Island">Kiawah Island</option>
+  <option value="Merion">Merion</option>
+  <option value="Olympic">Olympic</option>
+  <option value="Pebble Beach">Pebble Beach</option>
+  <option value="Pinehurst No.2">Pinehurst No.2</option>
+  <option value="Royal St George's">Royal St George's</option>
+  <option value="St Andrews">St Andrews</option>
+  <option value="Whistler">Whistler</option>
+</select><br>
+<label>HOLE</label>
+<select name="hole">
+<option value=1 selected>1</option>
+<option value=2>2</option>
+<option value=3>3</option>
+<option value=4>4</option>
+<option value=5>5</option>
+<option value=6>6</option>
+<option value=7>7</option>
+<option value=8>8</option>
+<option value=9>9</option>
+<option value=10>10</option>
+<option value=11>11</option>
+<option value=12>12</option>
+<option value=13>13</option>
+<option value=14>14</option>
+<option value=15>15</option>
+<option value=16>16</option>
+<option value=17>17</option>
+<option value=18>18</option>
+</select><br>
+<label>TEE</label>
+<select name="tee" selected>
+<option value=1>Hack | Amateur</option>
+<option value=2>Pro | Tour Pro</option>
+<option value=3>Master | Tour Master</option>
+<option value=4>Legend | Tour Legend | Champion</option>
+</select><br>
+<label>WIND</label>
+<select name="wind" selected>
+<option value=0>0 - 10mph</option>
+<option value=1>10 - 20mph</option>
+<option value=2>20 - 30mph</option>
+</select>
 
-<div class="tee next"></div>
 
-</div>
-</div>
-<script src="Flexbox2.js"></script>
+
+
+
+<script src="play-one-hole.js"></script>
 </body>
 </html>

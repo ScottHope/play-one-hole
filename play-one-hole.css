@@ -1,3 +1,23 @@
 body{
 	background:grey;
+	font:1.1em tahoma;
+}
+
+label{
+	font:inherit;
+	display:inline-block;
+	text-align:right;
+	color:#fff;
+	width:70px;
+}
+
+select{
+	-webkit-appearance: none;
+    background: cadetblue;
+    padding: 5px;
+    width: 280px;
+    margin: 3px;
+    outline: 1px solid #fff;
+    color: #fff;
+	font:inherit;
 }
