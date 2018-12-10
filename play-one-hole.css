@@ -18,6 +18,7 @@ select{
     width: 280px;
     margin: 3px;
     outline: 1px solid #fff;
+	border:none;
     color: #fff;
 	font:inherit;
 }
