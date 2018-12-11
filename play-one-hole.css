@@ -43,11 +43,11 @@ select:focus{
     background: linear-gradient(cadetblue,#4a7e80);
     padding: 10px;
     font: inherit;
-    color: yellow;
+    color: inherit;
     border-radius: 5px;
 	box-shadow:0 0 10px 1px #000;
 	outline:none;
-	border:1px solid white;
+	border:1.5px solid white;
 }
 
 #launch:hover{
@@ -57,6 +57,7 @@ select:focus{
 #launch:active{
 	box-shadow:0 0 5px #000;
 	background: linear-gradient(#4a7e80,cadetblue);
+	transform:scale(0.96);
 }
 
 #teepicture{
@@ -75,4 +76,6 @@ select:focus{
 fieldset{
 	display:inline;
 	color:white;
+	background:linear-gradient(black,blue);
+	border:5px solid #fff;
 }
