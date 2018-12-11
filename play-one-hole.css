@@ -54,3 +54,11 @@ select:focus{
 	margin:10px;
 	border:5px solid #fff;
 }
+
+#counter{
+	position:fixed;
+	bottom:5px;
+	right:5px;
+	width:100px;
+	opacity:0.5;
+}
