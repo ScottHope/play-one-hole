@@ -3,6 +3,12 @@ body{
 	font:1.1em tahoma;
 }
 
+#container{
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+}
+
 label{
 	font:inherit;
 	display:inline-block;
@@ -31,7 +37,9 @@ select:focus{
 }
 
 #launch{
-	margin: 10px 80px 10px;
+	margin: 0 40px;
+	position:relative;
+	bottom:70px;
     background: linear-gradient(cadetblue,#4a7e80);
     padding: 10px;
     font: inherit;
@@ -48,6 +56,7 @@ select:focus{
 
 #launch:active{
 	box-shadow:0 0 5px #000;
+	background: linear-gradient(#4a7e80,cadetblue);
 }
 
 #teepicture{
@@ -61,4 +70,9 @@ select:focus{
 	right:5px;
 	width:100px;
 	opacity:0.5;
+}
+
+fieldset{
+	display:inline;
+	color:white;
 }
