@@ -15,7 +15,7 @@ select{
 	-webkit-appearance: none;
     background: cadetblue;
     padding: 5px;
-    width: 280px;
+    width: 290px;
     margin: 3px;
     outline: none;
 	box-shadow:0 0 2px #000,inset 0 0 3px #000;
@@ -27,6 +27,7 @@ select{
 
 select:focus{
 	outline-offset:0;
+	background:green;
 }
 
 #launch{
@@ -47,4 +48,9 @@ select:focus{
 
 #launch:active{
 	box-shadow:0 0 5px #000;
+}
+
+#teepicture{
+	margin:10px;
+	border:5px solid #fff;
 }
