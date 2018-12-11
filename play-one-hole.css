@@ -29,6 +29,7 @@ select{
 	border-radius:3px;
     color: #fff;
 	font:inherit;
+	cursor:pointer;
 }
 
 select:focus{
@@ -48,6 +49,7 @@ select:focus{
 	box-shadow:0 0 10px 1px #000;
 	outline:none;
 	border:1.5px solid white;
+	cursor:pointer;
 }
 
 #launch:hover{
@@ -63,6 +65,7 @@ select:focus{
 #teepicture{
 	margin:10px;
 	border:5px solid #fff;
+	border-radius:10px;
 }
 
 #counter{
@@ -78,4 +81,5 @@ fieldset{
 	color:white;
 	background:linear-gradient(black,blue);
 	border:5px solid #fff;
+	border-radius:10px;
 }
