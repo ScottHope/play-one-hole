@@ -1,4 +1,4 @@
-var params = [];
+let params = [];
 document.getElementById("launch").addEventListener("click",rungame,false);
 for (i=0; i<4; i++){
 document.getElementsByTagName("select")[i].addEventListener("change",selection,false);
