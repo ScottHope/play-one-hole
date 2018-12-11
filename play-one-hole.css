@@ -17,8 +17,34 @@ select{
     padding: 5px;
     width: 280px;
     margin: 3px;
-    outline: 1px solid #fff;
-	border:none;
+    outline: none;
+	box-shadow:0 0 2px #000,inset 0 0 3px #000;
+	border:3px inset #fff;
+	border-radius:3px;
     color: #fff;
 	font:inherit;
+}
+
+select:focus{
+	outline-offset:0;
+}
+
+#launch{
+	margin: 10px 80px 10px;
+    background: linear-gradient(cadetblue,#4a7e80);
+    padding: 10px;
+    font: inherit;
+    color: yellow;
+    border-radius: 5px;
+	box-shadow:0 0 10px 1px #000;
+	outline:none;
+	border:1px solid white;
+}
+
+#launch:hover{
+	color:lime;
+}
+
+#launch:active{
+	box-shadow:0 0 5px #000;
 }
