@@ -33,6 +33,10 @@ select{
 	cursor:pointer;
 }
 
+select:hover{
+	border-style:outset;
+}
+
 select:focus{
 	outline-offset:0;
 	background:green;
