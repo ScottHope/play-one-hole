@@ -92,3 +92,20 @@ fieldset{
 legend{
 	padding: 0 3px;
 }
+
+@media screen and (max-width:740px){
+	body{
+		padding:5px;
+	}
+	
+	#launch{
+		display:block;
+		margin:10px auto;
+		bottom:0;
+	}
+	
+	#teepicture{
+		width:100%;
+		height:auto;
+	}
+}
