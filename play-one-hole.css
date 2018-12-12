@@ -84,3 +84,7 @@ fieldset{
 	border:5px solid #fff;
 	border-radius:10px;
 }
+
+legend{
+	padding: 0 3px;
+}
