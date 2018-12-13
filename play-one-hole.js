@@ -29,5 +29,5 @@ function selection(){
 selection();
 
 var music = new Audio();
-music.src = "http://brianbennettmusic.co.uk/web/wp-content/uploads/2015/02/BBC-Golf-Theme.mp3";
+music.src = "https://brianbennettmusic.co.uk/web/wp-content/uploads/2015/02/BBC-Golf-Theme.mp3";
 music.volume = "0.5";
