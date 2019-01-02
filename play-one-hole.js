@@ -34,7 +34,7 @@ function selection(){
 
 function playMe(){
 	
-	phraseNum = Math.floor(Math.random()*phrases.length) + 1;
+	phraseNum = Math.floor(Math.random()*phrases.length - 1) + 1;
 	sound.src = phrases[0] + phrases[phraseNum];
 	sound.play();
 	
