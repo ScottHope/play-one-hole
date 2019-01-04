@@ -99,6 +99,17 @@ option:disabled{
 	color:red;
 }
 
+.fas{
+	font-size:2rem;
+	position:relative;
+	top:10px;
+	width:36px;
+}
+
+ .fas:hover{
+	 cursor:pointer;
+}
+
 @media screen and (max-width:740px){
 	body{
 		padding:5px;

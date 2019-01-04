@@ -1,8 +1,13 @@
 let params = [];
 let phraseNum;
+let speaker = document.getElementsByClassName("fas")[0];
 let phrases = ["http://media5.wgt.com/versions/174509/versions/174509/uiassets/sounds/game/","let_the_big_dog_eat.mp3","beautiful_shot.mp3","never_up_never_in.mp3","choke.mp3","thats_a_huge_drive.mp3","that_one_is_wet.mp3","get_in_the_hole.mp3","garden_spot.mp3","time_to_reload.mp3","crushed_it.mp3","nice_shot.mp3","good_ball.mp3"];
 
 document.getElementById("launch").addEventListener("click",rungame,false);
+
+speaker.addEventListener("click", changeIcon);
+
+localStorage.key("audio") === null ? localStorage.setItem("audio","fa-volume-up") : undefined;
 
 for (i=0; i<4; i++){
 document.getElementsByTagName("select")[i].addEventListener("change",selection,false);
@@ -40,4 +45,25 @@ function playMe(){
 	
 }
 
+function changeIcon(){
+	
+	localStorage["audio"] === "fa-volume-up" ? localStorage["audio"] = "fa-volume-mute" : localStorage["audio"] = "fa-volume-up";
+	localStore();
+}
+
+function localStore(){
+	
+	if (localStorage["audio"] === "fa-volume-up") {
+		speaker.classList.add("fa-volume-up");
+		speaker.classList.remove("fa-volume-mute");
+		sound.muted = false;
+	} else {
+		speaker.classList.remove("fa-volume-up");
+		speaker.classList.add("fa-volume-mute");
+		sound.muted = true;
+	}
+	
+}
+
 selection();
+localStore();
