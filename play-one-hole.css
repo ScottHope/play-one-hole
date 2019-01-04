@@ -121,6 +121,10 @@ option:disabled{
 		bottom:0;
 	}
 	
+	.fas{
+		top:0;
+	}
+	
 	#teepicture{
 		width:100%;
 		height:auto;
