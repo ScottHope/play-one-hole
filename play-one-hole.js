@@ -1,7 +1,7 @@
 let params = [];
 let phraseNum;
 let speaker = document.getElementsByClassName("fas")[0];
-let phrases = ["http://media5.wgt.com/versions/174509/versions/174509/uiassets/sounds/game/","let_the_big_dog_eat.mp3","beautiful_shot.mp3","never_up_never_in.mp3","choke.mp3","thats_a_huge_drive.mp3","that_one_is_wet.mp3","get_in_the_hole.mp3","garden_spot.mp3","time_to_reload.mp3","crushed_it.mp3","nice_shot.mp3","good_ball.mp3"];
+let phrases = ["http://media5.wgt.com/versions/174509/versions/174509/uiassets/sounds/game/","let_the_big_dog_eat.mp3","beautiful_shot.mp3","never_up_never_in.mp3","choke.mp3","thats_a_huge_drive.mp3","that_one_is_wet.mp3","get_in_the_hole.mp3","garden_spot.mp3","time_to_reload.mp3","crushed_it.mp3","nice_shot.mp3","good_ball.mp3","you_hit_that_one_tight.mp3","now_thats_a_golf_shot","going_to_have_some_beach_time","come_on_be_right"];
 
 document.getElementById("launch").addEventListener("click",rungame,false);
 

@@ -108,6 +108,7 @@ option:disabled{
 
  .fas:hover{
 	 cursor:pointer;
+	 transform:scale(1.1);
 }
 
 @media screen and (max-width:740px){
@@ -124,5 +125,9 @@ option:disabled{
 	#teepicture{
 		width:100%;
 		height:auto;
+	}
+	
+	.fas{
+		top:0;
 	}
 }
