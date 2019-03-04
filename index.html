@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>World Golf Tour - Play One Hole</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="play-one-hole.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+		integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
-	<body>
+
+<body>
 	<div id="container">
-	<fieldset>
-	<legend>OPTIONS</legend>
-	<label>COURSE</label>
-	<select name="course">
-		<option value="BOBP3_13_FC">Bandon Dunes</option>
-		<option value="BPB">Bethpage Black</option>
-		<option value="CAB_11_FC">Cabo del Sol</option>
-		<option value="CHA_14_FC">Chambers Bay</option>
-		<option value="CON_10_FC">Congressional</option>
-		<option value="ERH_16_FC">Erin Hills</option>
-		<option value="KIOC">Kiawah Island</option>
-		<option value="MER_12_FC">Merion</option>
-		<option value="OLY_11_FC">Olympic</option>
-		<option value="PEB_14_FC">Pebble Beach</option>
-		<option value="PH2_13_FC">Pinehurst No.2</option>
-		<option value="ROY_10_FC">Royal St George's</option>
-		<option value="STA_09_FC">St Andrews</option>
-		<option value="WHI_12_FC">Whistler</option>
-		<option value="WOL_18_FC">Wolf Creek</option>
-	</select><br>
-	<label>HOLE</label>
-	<select name="hole">
-		<option value=1>1</option>
-		<option value=2>2</option>
-		<option value=3>3</option>
-		<option value=4>4</option>
-		<option value=5>5</option>
-		<option value=6>6</option>
-		<option value=7>7</option>
-		<option value=8>8</option>
-		<option value=9>9</option>
-		<option value=10>10</option>
-		<option value=11>11</option>
-		<option value=12>12</option>
-		<option value=13>13</option>
-		<option value=14>14</option>
-		<option value=15>15</option>
-		<option value=16>16</option>
-		<option value=17>17</option>
-		<option value=18>18</option>
-	</select><br>
-	<label>TEE</label>
-	<select name="tee">
-		<option value=1>Hack | Amateur</option>
-		<option value=2>(Tour) Pro</option>
-		<option value=3>(Tour) Master</option>
-		<option value=4>(Tour) Legend | (Tour) Champion</option>
-	</select><br>
-	<label>WIND</label>
-		<select name="wind">
-		<option value=0>0 - 10mph</option>
-		<option value=1>10 - 20mph</option>
-		<option value=2>20 - 30mph</option>
-	</select>
-	<input id="launch" type="button" value="Launch Game Client"></input>
-	<i class="fas"></i>
-	</fieldset>
-	<br>
-	<img id="teepicture">
+		<fieldset>
+			<legend>OPTIONS</legend>
+			<label>COURSE</label>
+			<select name="course">
+				<option value="BOBP3_13_FC">Bandon Dunes</option>
+				<option value="BPB">Bethpage Black</option>
+				<option value="CAB_11_FC">Cabo del Sol</option>
+				<option value="CHA_14_FC">Chambers Bay</option>
+				<option value="CON_10_FC">Congressional</option>
+				<option value="ERH_16_FC">Erin Hills</option>
+				<option value="KIOC">Kiawah Island</option>
+				<option value="MER_12_FC">Merion</option>
+				<option value="OLY_11_FC">Olympic</option>
+				<option value="PEB_14_FC">Pebble Beach</option>
+				<option value="PH2_13_FC">Pinehurst No.2</option>
+				<option value="ROY_10_FC">Royal St George's</option>
+				<option value="STA_09_FC">St Andrews</option>
+				<option value="WHI_12_FC">Whistler</option>
+				<option value="WOL_18_FC">Wolf Creek</option>
+			</select><br>
+			<label>HOLE</label>
+			<select name="hole">
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+				<option value=6>6</option>
+				<option value=7>7</option>
+				<option value=8>8</option>
+				<option value=9>9</option>
+				<option value=10>10</option>
+				<option value=11>11</option>
+				<option value=12>12</option>
+				<option value=13>13</option>
+				<option value=14>14</option>
+				<option value=15>15</option>
+				<option value=16>16</option>
+				<option value=17>17</option>
+				<option value=18>18</option>
+			</select><br>
+			<label>TEE</label>
+			<select name="tee">
+				<option value=1>Hack | Amateur</option>
+				<option value=2>(Tour) Pro</option>
+				<option value=3>(Tour) Master</option>
+				<option value=4>(Tour) Legend | (Tour) Champion</option>
+			</select><br>
+			<label>WIND</label>
+			<select name="wind">
+				<option value=0>0 - 10mph</option>
+				<option value=1>10 - 20mph</option>
+				<option value=2>20 - 30mph</option>
+			</select>
+			<input id="launch" type="button" value="Launch Game Client"></input>
+			<i class="fas"></i>
+		</fieldset>
+		<br>
+		<img id="teepicture">
 	</div>
-	<img id="counter" src="https://counter5.wheredoyoucomefrom.ovh/private/freecounterstat.php?c=ws5cu4mrqeua1a6trjnllwuk4jx839ek">
+	<img id="counter"
+		src="https://counter5.wheredoyoucomefrom.ovh/private/freecounterstat.php?c=ws5cu4mrqeua1a6trjnllwuk4jx839ek">
 	<script src="play-one-hole.js"></script>
-	</body>
+</body>
+
 </html>
