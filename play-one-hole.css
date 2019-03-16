@@ -132,3 +132,9 @@ option:disabled{
 	}
 
 }
+
+@media screen and (max-width:440px){
+	label{
+		text-align: left;
+	}
+}
