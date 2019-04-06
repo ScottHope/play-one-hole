@@ -54,6 +54,7 @@ select:focus{
 	outline:none;
 	border:1.5px solid white;
 	cursor:pointer;
+	margin:15px;
 }
 
 #launch{
