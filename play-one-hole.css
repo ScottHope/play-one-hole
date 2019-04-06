@@ -44,10 +44,7 @@ select:focus{
 	background:green;
 }
 
-#launch{
-	margin: 0 40px;
-	position:relative;
-	bottom:70px;
+#launch, #surface, #aerial{
 	background: linear-gradient(cadetblue,#4a7e80);
 	padding: 10px;
 	font: inherit;
@@ -57,6 +54,13 @@ select:focus{
 	outline:none;
 	border:1.5px solid white;
 	cursor:pointer;
+}
+
+#launch{
+	bottom:70px;
+	margin: 0 40px;
+	position:relative;
+
 }
 
 #launch:hover, #launch:focus{
