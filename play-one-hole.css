@@ -44,7 +44,7 @@ select:focus{
 	background:green;
 }
 
-#launch, #surface, #aerial{
+#launch{
 	background: linear-gradient(cadetblue,#4a7e80);
 	padding: 10px;
 	font: inherit;
@@ -54,14 +54,9 @@ select:focus{
 	outline:none;
 	border:1.5px solid white;
 	cursor:pointer;
-	margin:15px;
-}
-
-#launch{
 	bottom:70px;
 	margin: 0 40px;
 	position:relative;
-
 }
 
 #launch:hover, #launch:focus{
@@ -74,10 +69,19 @@ select:focus{
 	transform:scale(0.96);
 }
 
-#teepicture{
+#teepicture, #aerial, #surface{
 	margin:10px;
 	border:5px solid #fff;
 	border-radius:10px;
+}
+
+#aerial, #surface{
+	cursor: zoom-in;
+	width:45%;
+}
+
+#aerial[src*="george"], #aerial[src*="cabo"], #aerial[src*="whistler"]{
+	filter:brightness(2);
 }
 
 #counter{
@@ -86,6 +90,50 @@ select:focus{
 	right:5px;
 	width:100px;
 	opacity:0.5;
+}
+
+
+#aerial.zoom, #surface.zoom{
+	position: absolute;
+	top:0;
+	left:0;
+	cursor:zoom-out;
+	border:none;
+	margin:0;
+	width:100%;
+}
+
+#imgCont{
+	display:flex;
+	justify-content: space-between;
+	align-items:flex-start;
+	width:750px;
+}
+
+#fader{
+	position:fixed;
+	z-index:20;
+	bottom:15px;
+	left:10px;
+	display:none;
+	-webkit-appearance:none;
+	outline:none;
+	height:6px;
+	border-radius:5px;
+	border:3px inset #fff;
+	background:cyan;
+	cursor:pointer;
+	box-shadow:0 0 2px #000,inset 0 0 7px #000;
+}
+
+#fader::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background:cyan;
+	border:3px outset white;
+	box-shadow:0 0 2px #000,inset 0 0 5px #000;
 }
 
 fieldset{
@@ -131,9 +179,14 @@ option:disabled{
 		top:0;
 	}
 	
-	#teepicture{
-		width:100%;
+	#teepicture, #aerial, #surface{
+		width:95%;
 		height:auto;
+	}
+
+	#imgCont{
+		flex-wrap:wrap;
+		width:100%;
 	}
 
 }

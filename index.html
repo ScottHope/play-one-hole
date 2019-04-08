@@ -15,21 +15,21 @@
 			<legend>OPTIONS</legend>
 			<label>COURSE</label>
 			<select name="course">
-				<option value="BOBP3_13_FC">Bandon Dunes</option>
-				<option value="BPB">Bethpage Black</option>
-				<option value="CAB_11_FC">Cabo del Sol</option>
-				<option value="CHA_14_FC">Chambers Bay</option>
-				<option value="CON_10_FC">Congressional</option>
-				<option value="ERH_16_FC">Erin Hills</option>
-				<option value="KIOC">Kiawah Island</option>
-				<option value="MER_12_FC">Merion</option>
-				<option value="OLY_11_FC">Olympic</option>
-				<option value="PEB_14_FC">Pebble Beach</option>
-				<option value="PH2_13_FC">Pinehurst No.2</option>
-				<option value="ROY_10_FC">Royal St George's</option>
-				<option value="STA_09_FC">St Andrews</option>
-				<option value="WHI_12_FC">Whistler</option>
-				<option value="WOL_18_FC">Wolf Creek</option>
+				<option value="0">Bandon Dunes</option>
+				<option value="1">Bethpage Black</option>
+				<option value="2">Cabo del Sol</option>
+				<option value="3">Chambers Bay</option>
+				<option value="4">Congressional</option>
+				<option value="5">Erin Hills</option>
+				<option value="6">Kiawah Island</option>
+				<option value="7">Merion</option>
+				<option value="8">Olympic</option>
+				<option value="9">Pebble Beach</option>
+				<option value="10">Pinehurst No.2</option>
+				<option value="11">Royal St George's</option>
+				<option value="12">St Andrews</option>
+				<option value="13">Whistler</option>
+				<option value="14">Wolf Creek</option>
 			</select><br>
 			<label>HOLE</label>
 			<select name="hole">
@@ -70,12 +70,14 @@
 		</fieldset>
 		<br>
 		<img id="teepicture">
-		<div>
-		<input type="button" value="Surface Image" id="surface"><input type="button" value="Aerial Image" id="aerial">
+		<div id="imgCont">
+		<img id="aerial">
+		<img id="surface">
 		</div>
 	</div>
 	<img id="counter"
 		src="https://counter5.wheredoyoucomefrom.ovh/private/freecounterstat.php?c=ws5cu4mrqeua1a6trjnllwuk4jx839ek">
+		<input type="range" id="fader" min=0 max=100 value=100>
 	<script src="play-one-hole.js"></script>
 </body>
 
