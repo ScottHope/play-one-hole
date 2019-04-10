@@ -2,6 +2,9 @@ let params = [],
 phraseNum,
 speaker = document.getElementsByClassName("fas")[0],
 fadeSlider = document.querySelector("#fader"),
+form = document.querySelector("form"),
+checkBox = document.querySelector("#checkBox"),
+colourKey = document.querySelector("#colourKey"),
 launcher = document.getElementById("launch"),
 sound = new Audio(),
 teePic = document.getElementById("teepicture"),
@@ -20,6 +23,7 @@ for (i = 0; i < zoomIn.length; i++) {
 launcher.addEventListener("click", rungame, false);
 fadeSlider.addEventListener("input", imgOpacity, false);
 speaker.addEventListener("click", changeIcon, false);
+checkBox.addEventListener("input", hideKey, false);
 
 localStorage.key("audio") === null ? localStorage.setItem("audio", "fa-volume-up") : undefined;
 
@@ -77,22 +81,28 @@ function localStore() {
 }
 
 function fullsize() {
-	zoomIn[0].classList.toggle("zoom");
-	zoomIn[1].classList.toggle("zoom");
-	if (this.style.zIndex === "10") {
-		this.style.zIndex = "0";
-		this.style.opacity = "1";
+	aerialPic.classList.toggle("zoom");
+	surfacePic.classList.toggle("zoom");
+
+	if (aerialPic.classList.contains("zoom")){
+		form.style.display = "block";
+		colourKey.style.display = "block";
 	} else {
-		this.style.zIndex = "10";
-		this.style.opacity = "1";
+		form.style.display = "none";
+		colourKey.style.display = "none";
+		surfacePic.style.opacity = "1";
 	}
-	getComputedStyle(fadeSlider).display === "none" ? fadeSlider.style.display = "block" : fadeSlider.style.display = "none";
-	fadeSlider.value = 100;
-}
-imgOpacity()
+
+	this.id === "aerial" ? (surfacePic.style.opacity = 0, fadeSlider.value = 0) : (surfacePic.style.opacity = 1, fadeSlider.value = 100);
+
+	}
 
 function imgOpacity() {
-	zoomIn[0].style.zIndex === "10" ? zoomIn[0].style.opacity = this.value / 100 : zoomIn[1].style.opacity = this.value / 100;
+	surfacePic.style.opacity = this.value / 100;
+}
+
+function hideKey(){
+	checkBox.checked === true ? colourKey.style.visibility = "hidden" : colourKey.style.visibility = "visible";
 }
 
 selection();

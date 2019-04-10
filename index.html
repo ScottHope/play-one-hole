@@ -70,14 +70,48 @@
 		</fieldset>
 		<br>
 		<img id="teepicture">
+		<div id="colourKey">
+			<div class="swatch" id="green"></div>Green<br>
+			<div class="swatch" id="fringe"></div>Fringe<br>
+			<div class="swatch" id="teebox"></div>Tee Box<br>
+			<div class="swatch" id="fairway"></div>Fairway<br>
+			<div class="swatch" id="fairwayapp"></div>Fairway (Approach)<br>
+			<div class="swatch" id="rough1"></div>Rough 1 (1st cut)<br>
+			<div class="swatch" id="rough2"></div>Rough 2 (2nd cut)<br>
+			<div class="swatch" id="rough3"></div>Rough 3 (3rd cut)<br>
+			<div class="swatch" id="rough4"></div>Rough 4 (Dry rough)<br>
+			<div class="swatch" id="sand1"></div>Sand 1 (Hard)<br>
+			<div class="swatch" id="sand2"></div>Sand 2 (Dunes)<br>
+			<div class="swatch" id="sand3"></div>Sand 3 (Dunes + thin brush)<br>
+			<div class="swatch" id="bunker"></div>Bunker<br>
+			<div class="swatch" id="bunkerwall"></div>Bunker Wall<br>
+			<div class="swatch" id="dirt"></div>Dirt (Hard dirt)<br>
+			<div class="swatch" id="bunkerfri"></div>Bunker Fringe<br>
+			<div class="swatch" id="mulch"></div>Mulch<br>
+			<div class="swatch" id="wood"></div>Wood<br>
+			<div class="swatch" id="rock"></div>Rock<br>
+			<div class="swatch" id="cement"></div>Cement<br>
+			<div class="swatch" id="brush1"></div>Brush 1 (Short)<br>
+			<div class="swatch" id="brush2"></div>Brush 2 (Med)<br>
+			<div class="swatch" id="brush3"></div>Brush 3 (Tall)<br>
+			<div class="swatch" id="water"></div>Water<br>
+			<div class="swatch" id="lostball1"></div>Lost Ball 1 (Thick brush)<br>
+			<div class="swatch" id="lostball2"></div>Lost Ball 2 (NO PHOTO)<br>
+			<div class="swatch" id="oob"></div>OOB (Out of bounds)<br>
+		</div>
 		<div id="imgCont">
-		<img id="aerial">
-		<img id="surface">
+			<img id="aerial">
+			<img id="surface">
+			<form>
+				<input type="checkbox" id="checkBox">
+				<label for="checkBox">Hide Colour Key</label>
+				<input type="range" id="fader" min=0 max=100 value=100>
+				<label for="fader">Surface Map Opacity</label>
+			</form>
 		</div>
 	</div>
 	<img id="counter"
 		src="https://counter5.wheredoyoucomefrom.ovh/private/freecounterstat.php?c=ws5cu4mrqeua1a6trjnllwuk4jx839ek">
-		<input type="range" id="fader" min=0 max=100 value=100>
 	<script src="play-one-hole.js"></script>
 </body>
 
