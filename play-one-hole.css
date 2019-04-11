@@ -94,10 +94,12 @@ select:focus {
 
 #aerial.zoom, #surface.zoom {
 	position: absolute;
+	z-index:20;
 	top: 0;
 	left: 0;
 	cursor: zoom-out;
 	border: none;
+	border-radius:0;
 	margin: 0;
 	width: 100%;
 }
@@ -131,132 +133,148 @@ select:focus {
 	box-shadow: 0 0 2px #000, inset 0 0 5px #000;
 }
 
+#checkBox{
+	-webkit-appearance: checkbox;
+	width: 20px;
+	height: 20px;
+	vertical-align: -3px;
+}
+
 #colourKey {
 	position: fixed;
-	z-index: 20;
+	cursor:move;
+	z-index: 30;
 	top: 3px;
 	left: 3px;
 	color: #fff;
-	text-shadow:-0.5px -0.5px 0.5px black,0px -0.5px 0.5px black,0.5px -0.5px 0.5px black,-0.5px 0px 0.5px black,0.5px 0px 0.5px black,-0.5px 0.5px 0.5px black,0px 0.5px 0.5px black,0.5px 0.5px 0.5px black;
+	text-shadow:-1px -1px 1px black,0px -1px 1px black,1px -1px 1px black,-1px 0px 1px black,1px 0px 1px black,-1px 1px 1px black,0px 1px 1px black,1px 1px 1px black;
 	visibility: visible;
 	display: none;
 }
 
 .swatch {
-	width: 2rem;
-	height: 1rem;
-	display: inline-block;
-	border: 1px solid rgb(0, 0, 0);
-	margin-right: 5px;
+	padding-left:45px;
+	margin-bottom: 4px;
 }
 
 #green {
-	background: #00ff00;
+	background:linear-gradient(to right, #00ff00 14%,transparent 0%);
 }
 
 #fringe {
-	background: #00bb00;
+	background:linear-gradient(to right, #00bb00 14%,transparent 0%);
+
 }
 
 #teebox {
-	background: #00e100;
+	background:linear-gradient(to right, #00e100 14%,transparent 0%);
 }
 
 #fairway {
-	background: #009600;
+	background:linear-gradient(to right, #009600 14%,transparent 0%);
 }
 
 #fairwayapp {
-	background: #66cc66;
+	background:linear-gradient(to right, #66cc66 14%,transparent 0%);
 }
 
 #rough1 {
-	background: #aaaa00;
+	background:linear-gradient(to right, #aaaa00 14%,transparent 0%);
 }
 
 #rough2 {
-	background: #ffc800;
+	background:linear-gradient(to right, #ffc800 14%,transparent 0%);
 }
 
 #rough3 {
-	background: #aa8800;
+	background:linear-gradient(to right, #aa8800 14%,transparent 0%);
 }
 
 #rough4 {
-	background: #aac000;
+	background:linear-gradient(to right, #aac000 14%,transparent 0%);
 }
 
 #sand1 {
-	background: #646464;
+	background:linear-gradient(to right, #646464 14%,transparent 0%);
 }
 
 #sand2 {
-	background: #919191;
+	background:linear-gradient(to right, #919191 14%,transparent 0%);
 }
 
 #sand3 {
-	background: #c3c3c3;
+	background:linear-gradient(to right, #c3c3c3 14%,transparent 0%);
 }
 
 #bunker {
-	background: #dddddd;
+	background:linear-gradient(to right, #dddddd 14%,transparent 0%);
 }
 
 #bunkerwall {
-	background: #444444;
+	background:linear-gradient(to right, #444444 14%,transparent 0%);
 }
 
 #dirt {
-	background: #cc6600;
+	background:linear-gradient(to right, #cc6600 14%,transparent 0%);
 }
 
 #bunkerfri {
-	background: #8a8a00;
+	background:linear-gradient(to right, #8a8a00 14%,transparent 0%);
 }
 
 #mulch {
-	background: #ff6600;
+	background:linear-gradient(to right, #ff6600 14%,transparent 0%);
 }
 
 #wood {
-	background: #774422;
+	background:linear-gradient(to right, #774422 14%,transparent 0%);
 }
 
 #rock {
-	background: #661100;
+	background:linear-gradient(to right, #661100 14%,transparent 0%);
 }
 
 #cement {
-	background: #ffffff;
+	background:linear-gradient(to right, #ffffff 14%,transparent 0%);
 }
 
 #brush1 {
-	background: #660044;
+	background:linear-gradient(to right, #660044 14%,transparent 0%);
 }
 
 #brush2 {
-	background: #aa0077;
+	background:linear-gradient(to right, #aa0077 14%,transparent 0%);
 }
 
 #brush3 {
-	background: #ff00aa;
+	background:linear-gradient(to right, #ff00aa 14%,transparent 0%);
 }
 
 #water {
-	background: #0066ff;
+	background:linear-gradient(to right, #0066ff 14%,transparent 0%);
 }
 
 #lostball1 {
-	background: #ff0000;
+	background:linear-gradient(to right, #ff0000 14%,transparent 0%);
 }
 
 #lostball2 {
-	background: #770000;
+	background:linear-gradient(to right, #770000 14%,transparent 0%);
 }
 
 #oob {
-	background: #000000;
-	border: 1px solid #fff;
+  background: linear-gradient(to right, #000000 14%,transparent 0%);
+}
+
+#mask{
+	display:none;
+	position:fixed;
+	z-index:10;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:#000;
 }
 
 form {
@@ -265,6 +283,7 @@ form {
 	left: 10px;
 	z-index: 20;
 	color: #fff;
+	text-shadow:-1px -1px 1px black,0px -1px 1px black,1px -1px 1px black,-1px 0px 1px black,1px 0px 1px black,-1px 1px 1px black,0px 1px 1px black,1px 1px 1px black;
 	display:none;
 }
 
@@ -325,5 +344,13 @@ option:disabled {
 @media screen and (max-width:440px) {
 	fieldset label {
 		text-align: left;
+	}
+}
+
+@media screen and (max-height:780px) {
+	#colourKey {
+		height:calc(100% - 120px);
+		overflow:auto;
+		pointer-events:all;
 	}
 }

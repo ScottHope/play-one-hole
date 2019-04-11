@@ -3,6 +3,7 @@ phraseNum,
 speaker = document.getElementsByClassName("fas")[0],
 fadeSlider = document.querySelector("#fader"),
 form = document.querySelector("form"),
+mask = document.querySelector("#mask"),
 checkBox = document.querySelector("#checkBox"),
 colourKey = document.querySelector("#colourKey"),
 launcher = document.getElementById("launch"),
@@ -87,10 +88,12 @@ function fullsize() {
 	if (aerialPic.classList.contains("zoom")){
 		form.style.display = "block";
 		colourKey.style.display = "block";
+		mask.style.display = "block";
 	} else {
 		form.style.display = "none";
 		colourKey.style.display = "none";
 		surfacePic.style.opacity = "1";
+		mask.style.display = "";
 	}
 
 	this.id === "aerial" ? (surfacePic.style.opacity = 0, fadeSlider.value = 0) : (surfacePic.style.opacity = 1, fadeSlider.value = 100);
@@ -107,3 +110,9 @@ function hideKey(){
 
 selection();
 localStore();
+
+$(document).ready(function(){
+
+	$(colourKey).draggable({"revert":true});
+
+});
