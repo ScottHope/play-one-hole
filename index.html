@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="play-one-hole.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
 		integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -15,21 +17,21 @@
 			<legend>OPTIONS</legend>
 			<label>COURSE</label>
 			<select name="course">
-				<option value="BOBP3_13_FC">Bandon Dunes</option>
-				<option value="BPB">Bethpage Black</option>
-				<option value="CAB_11_FC">Cabo del Sol</option>
-				<option value="CHA_14_FC">Chambers Bay</option>
-				<option value="CON_10_FC">Congressional</option>
-				<option value="ERH_16_FC">Erin Hills</option>
-				<option value="KIOC">Kiawah Island</option>
-				<option value="MER_12_FC">Merion</option>
-				<option value="OLY_11_FC">Olympic</option>
-				<option value="PEB_14_FC">Pebble Beach</option>
-				<option value="PH2_13_FC">Pinehurst No.2</option>
-				<option value="ROY_10_FC">Royal St George's</option>
-				<option value="STA_09_FC">St Andrews</option>
-				<option value="WHI_12_FC">Whistler</option>
-				<option value="WOL_18_FC">Wolf Creek</option>
+				<option value="0">Bandon Dunes</option>
+				<option value="1">Bethpage Black</option>
+				<option value="2">Cabo del Sol</option>
+				<option value="3">Chambers Bay</option>
+				<option value="4">Congressional</option>
+				<option value="5">Erin Hills</option>
+				<option value="6">Kiawah Island</option>
+				<option value="7">Merion</option>
+				<option value="8">Olympic</option>
+				<option value="9">Pebble Beach</option>
+				<option value="10">Pinehurst No.2</option>
+				<option value="11">Royal St George's</option>
+				<option value="12">St Andrews</option>
+				<option value="13">Whistler</option>
+				<option value="14">Wolf Creek</option>
 			</select><br>
 			<label>HOLE</label>
 			<select name="hole">
@@ -70,9 +72,49 @@
 		</fieldset>
 		<br>
 		<img id="teepicture">
+		<div id="colourKey">
+			<div class="swatch" id="green">Green</div>
+			<div class="swatch" id="fringe">Fringe</div>
+			<div class="swatch" id="teebox">Tee Box</div>
+			<div class="swatch" id="fairway">Fairway</div>
+			<div class="swatch" id="fairwayapp">Fairway (Approach)</div>
+			<div class="swatch" id="rough1">1st Cut Rough</div>
+			<div class="swatch" id="rough2">2nd Cut Rough</div>
+			<div class="swatch" id="rough3">Deep Rough</div>
+			<div class="swatch" id="rough4">Rough</div>
+			<div class="swatch" id="sand1">Hard Sand</div>
+			<div class="swatch" id="sand2">Soft Sand</div>
+			<div class="swatch" id="sand3">Sand / Brush</div>
+			<div class="swatch" id="bunker">Bunker</div>
+			<div class="swatch" id="bunkerwall">Bunker Wall</div>
+			<div class="swatch" id="dirt">Dirt</div>
+			<div class="swatch" id="bunkerfri">Bunker Fringe</div>
+			<div class="swatch" id="mulch">Mulch</div>
+			<div class="swatch" id="wood">Wood</div>
+			<div class="swatch" id="rock">Rock</div>
+			<div class="swatch" id="cement">Cement</div>
+			<div class="swatch" id="brush1">Light Brush</div>
+			<div class="swatch" id="brush2">Medium Brush</div>
+			<div class="swatch" id="brush3">Heavy Brush</div>
+			<div class="swatch" id="water">Water (Lost Ball)</div>
+			<div class="swatch" id="lostball1">Lost Ball 1 (Thick brush)</div>
+			<div class="swatch" id="lostball2">Lost Ball 2 (NO PHOTO)</div>
+			<div class="swatch" id="oob">OOB (Out of bounds)</div>
+		</div>
+		<div id="imgCont">
+			<img id="aerial">
+			<img id="surface">
+			<form>
+				<input type="checkbox" id="checkBox">
+				<label for="checkBox">Hide Colour Key</label><br>
+				<input type="range" id="fader" min=0 max=100 value=100><br>
+				<label for="fader">Surface Map Opacity</label>
+			</form>
+		</div>
 	</div>
 	<img id="counter"
 		src="https://counter5.wheredoyoucomefrom.ovh/private/freecounterstat.php?c=ws5cu4mrqeua1a6trjnllwuk4jx839ek">
+		<div id="mask"></div>
 	<script src="play-one-hole.js"></script>
 </body>
 

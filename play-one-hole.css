@@ -1,140 +1,356 @@
-body{
-	background-color:grey;
+body {
+	background-color: grey;
 	/* background-image:url(images/Wallpaper/xmas.jpg); */
-	background-size:cover;
-	font:1.1em tahoma;
-	padding:20px;
+	background-size: cover;
+	font: 1.1em tahoma;
+	padding: 20px;
 }
 
-#container{
-	display:flex;
-	flex-flow:column;
-	align-items:center;
+#container {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 }
 
-label{
-	font:inherit;
-	display:inline-block;
-	text-align:right;
-	color:#fff;
-	width:70px;
+fieldset label {
+	font: inherit;
+	display: inline-block;
+	text-align: right;
+	color: #fff;
+	width: 70px;
 }
 
-select{
+select {
 	-webkit-appearance: none;
 	background: cadetblue;
 	padding: 5px;
 	width: 290px;
 	margin: 3px;
 	outline: none;
-	box-shadow:0 0 2px #000,inset 0 0 3px #000;
-	border:3px inset #fff;
-	border-radius:3px;
+	box-shadow: 0 0 2px #000, inset 0 0 3px #000;
+	border: 3px inset #fff;
+	border-radius: 3px;
 	color: #fff;
-	font:inherit;
-	cursor:pointer;
+	font: inherit;
+	cursor: pointer;
 }
 
-select:hover{
-	border-style:outset;
+select:hover {
+	border-style: outset;
 }
 
-select:focus{
-	outline-offset:0;
-	background:green;
+select:focus {
+	outline-offset: 0;
+	background: green;
 }
 
-#launch{
-	margin: 0 40px;
-	position:relative;
-	bottom:70px;
-	background: linear-gradient(cadetblue,#4a7e80);
+#launch {
+	background: linear-gradient(cadetblue, #4a7e80);
 	padding: 10px;
 	font: inherit;
 	color: inherit;
 	border-radius: 5px;
-	box-shadow:0 0 10px 1px #000;
-	outline:none;
-	border:1.5px solid white;
-	cursor:pointer;
+	box-shadow: 0 0 10px 1px #000;
+	outline: none;
+	border: 1.5px solid white;
+	cursor: pointer;
+	bottom: 70px;
+	margin: 0 40px;
+	position: relative;
 }
 
-#launch:hover, #launch:focus{
-	color:lime;
+#launch:hover, #launch:focus {
+	color: lime;
 }
 
-#launch:active{
-	box-shadow:0 0 5px #000;
-	background: linear-gradient(#4a7e80,cadetblue);
-	transform:scale(0.96);
+#launch:active {
+	box-shadow: 0 0 5px #000;
+	background: linear-gradient(#4a7e80, cadetblue);
+	transform: scale(0.96);
 }
 
-#teepicture{
-	margin:10px;
-	border:5px solid #fff;
-	border-radius:10px;
+#teepicture, #aerial, #surface {
+	margin: 10px;
+	border: 5px solid #fff;
+	border-radius: 10px;
 }
 
-#counter{
+#aerial, #surface {
+	cursor: zoom-in;
+	width: 45%;
+}
+
+#aerial[src*="george"], #aerial[src*="cabo"], #aerial[src*="whistler"] {
+	filter: brightness(2);
+}
+
+#counter {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	width: 100px;
+	opacity: 0.5;
+}
+
+#aerial.zoom, #surface.zoom {
+	position: absolute;
+	z-index:20;
+	top: 0;
+	left: 0;
+	cursor: zoom-out;
+	border: none;
+	border-radius:0;
+	margin: 0;
+	width: 100%;
+}
+
+#imgCont {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 750px;
+}
+
+#fader {
+	/* display: none; */
+	-webkit-appearance: none;
+	outline: none;
+	height: 6px;
+	border-radius: 5px;
+	border: 3px inset #fff;
+	background: cyan;
+	cursor: pointer;
+	box-shadow: 0 0 2px #000, inset 0 0 7px #000;
+}
+
+#fader::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: cyan;
+	border: 3px outset white;
+	box-shadow: 0 0 2px #000, inset 0 0 5px #000;
+}
+
+#checkBox{
+	-webkit-appearance: checkbox;
+	width: 20px;
+	height: 20px;
+	vertical-align: -3px;
+}
+
+#colourKey {
+	position: fixed;
+	cursor:move;
+	z-index: 30;
+	top: 3px;
+	left: 3px;
+	color: #fff;
+	text-shadow:-1px -1px 1px black,0px -1px 1px black,1px -1px 1px black,-1px 0px 1px black,1px 0px 1px black,-1px 1px 1px black,0px 1px 1px black,1px 1px 1px black;
+	visibility: visible;
+	display: none;
+}
+
+.swatch {
+	padding-left:45px;
+	margin-bottom: 4px;
+}
+
+#green {
+	background:linear-gradient(to right, #00ff00 14%,transparent 0%);
+}
+
+#fringe {
+	background:linear-gradient(to right, #00bb00 14%,transparent 0%);
+
+}
+
+#teebox {
+	background:linear-gradient(to right, #00e100 14%,transparent 0%);
+}
+
+#fairway {
+	background:linear-gradient(to right, #009600 14%,transparent 0%);
+}
+
+#fairwayapp {
+	background:linear-gradient(to right, #66cc66 14%,transparent 0%);
+}
+
+#rough1 {
+	background:linear-gradient(to right, #aaaa00 14%,transparent 0%);
+}
+
+#rough2 {
+	background:linear-gradient(to right, #ffc800 14%,transparent 0%);
+}
+
+#rough3 {
+	background:linear-gradient(to right, #aa8800 14%,transparent 0%);
+}
+
+#rough4 {
+	background:linear-gradient(to right, #aac000 14%,transparent 0%);
+}
+
+#sand1 {
+	background:linear-gradient(to right, #646464 14%,transparent 0%);
+}
+
+#sand2 {
+	background:linear-gradient(to right, #919191 14%,transparent 0%);
+}
+
+#sand3 {
+	background:linear-gradient(to right, #c3c3c3 14%,transparent 0%);
+}
+
+#bunker {
+	background:linear-gradient(to right, #dddddd 14%,transparent 0%);
+}
+
+#bunkerwall {
+	background:linear-gradient(to right, #444444 14%,transparent 0%);
+}
+
+#dirt {
+	background:linear-gradient(to right, #cc6600 14%,transparent 0%);
+}
+
+#bunkerfri {
+	background:linear-gradient(to right, #8a8a00 14%,transparent 0%);
+}
+
+#mulch {
+	background:linear-gradient(to right, #ff6600 14%,transparent 0%);
+}
+
+#wood {
+	background:linear-gradient(to right, #774422 14%,transparent 0%);
+}
+
+#rock {
+	background:linear-gradient(to right, #661100 14%,transparent 0%);
+}
+
+#cement {
+	background:linear-gradient(to right, #ffffff 14%,transparent 0%);
+}
+
+#brush1 {
+	background:linear-gradient(to right, #660044 14%,transparent 0%);
+}
+
+#brush2 {
+	background:linear-gradient(to right, #aa0077 14%,transparent 0%);
+}
+
+#brush3 {
+	background:linear-gradient(to right, #ff00aa 14%,transparent 0%);
+}
+
+#water {
+	background:linear-gradient(to right, #0066ff 14%,transparent 0%);
+}
+
+#lostball1 {
+	background:linear-gradient(to right, #ff0000 14%,transparent 0%);
+}
+
+#lostball2 {
+	background:linear-gradient(to right, #770000 14%,transparent 0%);
+}
+
+#oob {
+  background: linear-gradient(to right, #000000 14%,transparent 0%);
+}
+
+#mask{
+	display:none;
 	position:fixed;
-	bottom:5px;
-	right:5px;
-	width:100px;
-	opacity:0.5;
+	z-index:10;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:#000;
 }
 
-fieldset{
-	display:inline;
-	color:white;
-	background:linear-gradient(black,blue);
-	border:5px solid #fff;
-	border-radius:10px;
+form {
+	position: fixed;
+	bottom: 15px;
+	left: 10px;
+	z-index: 20;
+	color: #fff;
+	text-shadow:-1px -1px 1px black,0px -1px 1px black,1px -1px 1px black,-1px 0px 1px black,1px 0px 1px black,-1px 1px 1px black,0px 1px 1px black,1px 1px 1px black;
+	display:none;
 }
 
-legend{
+input{
+	margin:10px 5px;
+}
+
+fieldset {
+	display: inline;
+	color: white;
+	background: linear-gradient(black, blue);
+	border: 5px solid #fff;
+	border-radius: 10px;
+}
+
+legend {
 	padding: 0 3px;
 }
 
-option:disabled{
-	color:red;
+option:disabled {
+	color: red;
 }
 
-.fas{
-	font-size:2rem;
-	position:relative;
-	top:10px;
-	width:36px;
+.fas {
+	font-size: 2rem;
+	position: relative;
+	top: 10px;
+	width: 36px;
 }
 
- .fas:hover{
-	 cursor:pointer;
-	 transform:scale(1.1);
+.fas:hover {
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
-@media screen and (max-width:740px){
-	body{
-		padding:5px;
+@media screen and (max-width:740px) {
+	body {
+		padding: 5px;
 	}
-	
-	#launch{
-		display:block;
-		margin:10px auto;
-		bottom:0;
+	#launch {
+		display: block;
+		margin: 10px auto;
+		bottom: 0;
 	}
-	
-	.fas{
-		top:0;
+	.fas {
+		top: 0;
 	}
-	
-	#teepicture{
-		width:100%;
-		height:auto;
+	#teepicture, #aerial, #surface {
+		width: 95%;
+		height: auto;
 	}
-
+	#imgCont {
+		flex-wrap: wrap;
+		width: 100%;
+	}
 }
 
-@media screen and (max-width:440px){
-	label{
+@media screen and (max-width:440px) {
+	fieldset label {
 		text-align: left;
+	}
+}
+
+@media screen and (max-height:780px) {
+	#colourKey {
+		height:calc(100% - 120px);
+		overflow:auto;
+		pointer-events:all;
 	}
 }
