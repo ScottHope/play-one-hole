@@ -94,6 +94,9 @@ function fullsize() {
 		colourKey.style.display = "none";
 		surfacePic.style.opacity = "1";
 		mask.style.display = "";
+		surfacePic.style.transform = "";
+		aerialPic.style.transform = "";
+		rotateSlider.value = 0;
 	}
 
 	this.id === "aerial" ? (surfacePic.style.opacity = 0, fadeSlider.value = 0) : (surfacePic.style.opacity = 1, fadeSlider.value = 100);
