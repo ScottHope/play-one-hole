@@ -1,5 +1,3 @@
-window.location = "https://scotthope.github.io/WGT-hole-maps/";
-
 let params = [],
 phraseNum,
 speaker = document.getElementsByClassName("fas")[0],
