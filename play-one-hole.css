@@ -1,6 +1,6 @@
 body {
 	background-color: grey;
-	background-image:url(images/Wallpaper/xmas.jpg);
+	/* background-image:url(images/Wallpaper/xmas.jpg); */
 	background-size: cover;
 	font: 1.1em tahoma;
 	padding: 20px;
@@ -10,6 +10,17 @@ body {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
+}
+
+#holeInfo{
+	background-color: #aaa;
+	padding: 1em 1.5em;
+	max-width: 670px;
+}
+
+#holeInfo>p{
+	color:#fff;
+	margin-bottom: 0;
 }
 
 fieldset label {
@@ -69,7 +80,7 @@ select:focus {
 	transform: scale(0.96);
 }
 
-#teepicture, #aerial, #surface, #help {
+#teepicture, #aerial, #surface, #help, #holeInfo {
 	margin: 10px;
 	border: 5px solid #fff;
 	border-radius: 10px;

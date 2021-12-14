@@ -5,6 +5,7 @@ let params = [],
 	checkBox = document.querySelector("#checkBox"),
 	colourKey = document.querySelector("#colourKey"),
 	teePic = document.getElementById("teepicture"),
+	holeInfo = document.getElementById("holeInfo"),
 	aerialPic = document.getElementById("aerial"),
 	surfacePic = document.getElementById("surface"),
 	courseCode = ["BOBP3_13_FC", "BPB", "CAB_11_FC", "CHA_14_FC", "CON_10_FC", "ERH_16_FC", "KIOC", "MER_12_FC", "OAK_09_FC", "OLY_11_FC", "PEB_14_FC", "PH2_13_FC", "ROY_10_FC", "STA_09_FC", "TRP_20_FC", "WHI_12_FC", "WOL_18_FC"],
@@ -39,6 +40,12 @@ function selection() {
 		aerialPic.src = "https://securewgt-a.akamaihd.net/versions/169789/courses/" + bandonCourse[params[1] - 1] + "_aerial.jpg";
 		surfacePic.src = "https://securewgt-a.akamaihd.net/versions/169789/courses/" + bandonCourse[params[1] - 1] + "_surface.gif"
 	}
+	fetch("courses.json")
+	.then(response => response.json())
+	.then(data => {
+		holeInfo.innerHTML = data[courseName[params[0]]].Holes[params[1]-1];
+		console.log(data[courseName[params[0]]].Holes[0]);
+	})
 }
 
 function fullsize() {
