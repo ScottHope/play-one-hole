@@ -18,9 +18,10 @@ body {
 	max-width: 670px;
 }
 
-#holeInfo>p{
+#holeInfo>span{
 	color:#fff;
-	margin-bottom: 0;
+	margin-top: 0.5em;
+	display: block;
 }
 
 fieldset label {
