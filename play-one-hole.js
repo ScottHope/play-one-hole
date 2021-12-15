@@ -44,7 +44,6 @@ function selection() {
 	.then(response => response.json())
 	.then(data => {
 		holeInfo.innerHTML = data[courseName[params[0]]].Holes[params[1]-1];
-		console.log(data[courseName[params[0]]].Holes[0]);
 	})
 }
 
