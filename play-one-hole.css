@@ -338,6 +338,10 @@ option.disabled {
 	transform: scale(1.1);
 }
 
+option:disabled {
+	color: orange;
+}
+
 @media screen and (max-width:770px) {
 	body {
 		padding: 5px;
