@@ -33,7 +33,8 @@ function options() {
 
 function selection() {
 	options();
-	teePic.src = `https://securewgt-a.akamaihd.net/assets/community/images/wgt/courses/${teePicCode[params[0]]}_H${params[1].padStart(2, 0)}_TeeShot.jpg`;
+	//teePic.src = `https://securewgt-a.akamaihd.net/assets/community/images/wgt/courses/${teePicCode[params[0]]}_H${params[1].padStart(2, 0)}_TeeShot.jpg`;
+	teePic.src = `images/${courseCode[params[0]]}/${params[1].padStart(2, 0)}.jpg`;
 	if (courseCode[params[0]] !== "BOBP3_13_FC") {
 		aerialPic.src = `https://securewgt-a.akamaihd.net/versions/169789/courses/${courseName[params[0]]}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}_aerial.jpg`;
 		surfacePic.src = `https://securewgt-a.akamaihd.net/versions/169789/courses/${courseName[params[0]]}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}_surface.gif`;
