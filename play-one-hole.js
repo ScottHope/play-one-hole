@@ -8,6 +8,7 @@ let params = [],
 	holeInfo = document.getElementById("holeInfo"),
 	aerialPic = document.getElementById("aerial"),
 	surfacePic = document.getElementById("surface"),
+	baseURL = "https://securewgt-a.akamaihd.net/versions/169789/courses/",
 	teePicCode = ["BOBP3", "BPB", "CAB", "CHA", "CON", "ERH", "KIOC", "MER", "OAK", "OLY", "PEB", "PGN", "PH2", "ROY", "STA", "TRP", "WHI", "WOL"],
 	courseCode = ["BOBP3_13_FC", "BPB", "CAB_11_FC", "CHA_14_FC", "CON_10_FC", "ERH_16_FC", "KIOC", "MER_12_FC", "OAK_09_FC", "OLY_11_FC", "PEB_14_FC", "PGN_21_FC", "PH2_13_FC", "ROY_10_FC", "STA_09_FC", "TRP_20_FC", "WHI_12_FC", "WOL_18_FC"],
 	courseName = ["bestofbandonpar3_13_FC", "bethpageblack", "cabodelsol_11_FC", "chambersbay_14_FC", "congressional_10_FC", "erinhills_16_FC", "kiawah", "merion_12_FC", "oakmont_09_FC", "olympicclub_11_FC", "pebblebeach_14_FC", "pganational_21_FC", "pinehurst2_13_FC", "royalstgeorges_10_FC", "standrews_09_FC", "torreypines_20_FC", "whistler_12_FC", "wolfcreek_18_FC"],
@@ -34,13 +35,14 @@ function options() {
 function selection() {
 	options();
 	//teePic.src = `https://securewgt-a.akamaihd.net/assets/community/images/wgt/courses/${teePicCode[params[0]]}_H${params[1].padStart(2, 0)}_TeeShot.jpg`;
+	//teePic.src = `images/${courseCode[params[0]]}/${params[1].padStart(2, 0)}.jpg`;
 	teePic.src = `images/${courseCode[params[0]]}/${params[1].padStart(2, 0)}.jpg`;
 	if (courseCode[params[0]] !== "BOBP3_13_FC") {
-		aerialPic.src = `https://securewgt-a.akamaihd.net/versions/169789/courses/${courseName[params[0]]}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}_aerial.jpg`;
-		surfacePic.src = `https://securewgt-a.akamaihd.net/versions/169789/courses/${courseName[params[0]]}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}_surface.gif`;
+		aerialPic.src = `${baseURL}${courseName[params[0]]}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}_aerial.jpg`;
+		surfacePic.src = `${baseURL}${courseName[params[0]]}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}/${courseCode[params[0]]}_H${params[1].padStart(2, 0)}_surface.gif`;
 	} else {
-		aerialPic.src = `https://securewgt-a.akamaihd.net/versions/169789/courses/${bandonCourse[params[1] - 1]}_aerial.jpg`;
-		surfacePic.src = `https://securewgt-a.akamaihd.net/versions/169789/courses/${bandonCourse[params[1] - 1]}_surface.gif`
+		aerialPic.src = `${baseURL}${bandonCourse[params[1] - 1]}_aerial.jpg`;
+		surfacePic.src = `${baseURL}${bandonCourse[params[1] - 1]}_surface.gif`
 	}
 	fetch("courses.json")
 	.then(response => response.json())
