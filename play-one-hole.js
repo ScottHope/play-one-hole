@@ -84,6 +84,6 @@ selection();
 
 $(document).ready(function () {
 
-	$(colourKey).draggable({ "revert": true });
+	$("#colourKey").draggable({ "revert": true });
 
 });
