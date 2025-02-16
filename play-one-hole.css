@@ -127,6 +127,7 @@ select:focus {
 #fader {
 	/* display: none; */
 	-webkit-appearance: none;
+	appearance:none;
 	outline: none;
 	height: 6px;
 	border-radius: 5px;
@@ -148,6 +149,7 @@ select:focus {
 
 #checkBox{
 	-webkit-appearance: checkbox;
+	appearance: checkbox;
 	width: 20px;
 	height: 20px;
 	vertical-align: -3px;
