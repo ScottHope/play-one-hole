@@ -34,6 +34,7 @@ fieldset label {
 
 select {
 	-webkit-appearance: none;
+	appearance: none;
 	background: cadetblue;
 	padding: 5px;
 	width: 290px;
